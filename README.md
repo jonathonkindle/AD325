@@ -19,20 +19,20 @@
         - **Required** - true
         - **Type** - JSON
     - **HTTP Responses:**
-      - 200 -
+      - 200:
         - **Description** - Successful operation - user created
         - **Schema** -
           - type - int
           - item - userId
-      - 409 -
+      - 409:
         - **Description** - Conflict
-      - 401 -
+      - 401:
         - **Description** - Unauthorized (user is not authenticated)
-      - 403 -
+      - 403:
         - **Description** - Forbidden (user has no permission for operation)
-      - 400 -
+      - 400:
         - **Description** - Bad Request - Invalid User field entries supplied
-      - 500 -
+      - 500:
         - **Description** - Internal Server Error
   - **Method** - GET
     - **Summary** - Returns list of all users
@@ -42,16 +42,16 @@
         - **Required** - false
         - **Type** - NA
     - **HTTP Responses:**
-      - 200 -
+      - 200:
         - **Description** - Successful operation - Users retrieved
         - **Schema**
           - type - array (JSON)
           - item - list of User objects
-      - 401 -
+      - 401:
         - **Description** - Unauthorized (user is not authenticated)
-      - 403 -
+      - 403:
         - **Description** - Forbidden (user has no permission for operation)
-      - 500 -
+      - 500:
         - **Description** - Internal Server Error
   - **Method** - PUT
     - **Summary** - Method Not Allowed
@@ -60,7 +60,7 @@
         - **Required** - false
         - **Type** - NA
     - **HTTP Responses:**
-      - 405 -
+      - 405:
         - **Description** - Method Not Allowed
   - **Method** - DELETE
     - **Summary** - Method Not Allowed
@@ -69,7 +69,7 @@
         - **Required** - false
         - **Type** - NA
     - **HTTP Responses:**
-      - 405 -
+      - 405:
         - **Description** - Method Not Allowed
 
 - **`/users/{userId}`**
@@ -81,7 +81,7 @@
         - **Required** - false
         - **Type** - NA
     - **HTTP Responses:**
-      - 405 -
+      - 405:
         - **Description** - Method Not Allowed
   - **Method** - GET
     - **Summary** - Returns supplied userId user information
@@ -91,16 +91,16 @@
         - **Required** - true
         - **Type** - int
     - **HTTP Responses:**
-      - 200 -
+      - 200:
         - **Description** - Successful operation - User retrieved
         - **Schema**
           - type - JSON
           - item - User object
-      - 401 -
+      - 401:
         - **Description** - Unauthorized (user is not authenticated)
-      - 400 -
+      - 400:
         - **Description** - Bad Request - Invalid userId supplied
-      - 500 -
+      - 500:
         - **Description** - Internal Server Error
   - **Method** - PUT
     - **Summary** - Update user information
@@ -113,18 +113,18 @@
         - **Required** - true
         - **Type** - JSON
     - **HTTP Responses:**
-      - 200 -
+      - 200:
         - **Description** - Successful operation - user updated
         - **Schema**
           - type - JSON
           - item - User object
-      - 400 -
+      - 400:
         - **Description** - Bad Request - Invaid userId supplied
-      - 401 -
+      - 401:
         - **Description** - Unauthorized (user is not authenticated)
-      - 403 -
+      - 403:
         - **Description** - Forbidden (user has no permission for operation)
-      - 500 -
+      - 500:
         - **Description** - Internal Server Error
   - **Method** - DELETE
     - **Summary** - Delete user
@@ -134,18 +134,18 @@
         - **Required** - true
         - **Type** - int
     - **HTTP Responses:**
-      - 200 -
+      - 200:
         - **Description** - Successful operation - user deleted
         - **Schema**
           - type - JSON
           - item - User object deleted
-      - 400 -
+      - 400:
         - **Description** - Bad Request - Invalid userId supplied
-      - 401 -
+      - 401:
         - **Description** - Unauthorized (user is not authenticated)
-      - 403 -
+      - 403:
         - **Description** - Forbidden (user has no permission for operation)
-      - 500 -
+      - 500:
         - **Description** - Internal Server Error
 
 - **`/users/{userId}/tasks`**
@@ -161,20 +161,20 @@
         - **Required** - true
         - **Type** - int
     - **HTTP Responses:**
-      - 200 -
+      - 200:
         - **Description** - Successful operation - task created
         - **Schema** -
           - type - int
           - item - taskId
-      - 400 -
+      - 400:
         - **Description** - Bad Request - Invalid userId supplied
-      - 401 -
+      - 401:
         - **Description** - Unauthorized (user is not authenticated)
-      - 403 -
+      - 403:
         - **Description** - Forbidden (user has no permission for operation)
-      - 409 -
+      - 409:
         - **Description** - Conflict
-      - 500 -
+      - 500:
         - **Description** - Internal Server Error
   - **Method** - GET
     - **Summary** - Returns list of all tasks for a userId
@@ -184,18 +184,18 @@
         - **Required** - true
         - **Type** - int
     - **HTTP Responses:**
-      - 200 -
+      - 200:
         - **Description** - Successful operation - User Tasks retrieved
         - **Schema**
           - type - array (JSON)
           - item - list of tasks objects
-      - 400 -
+      - 400:
         - **Description** - Bad Request - Invalid userId supplied
-      - 401 -
+      - 401:
         - **Description** - Unauthorized (user is not authenticated)
-      - 403 -
+      - 403:
         - **Description** - Forbidden (user has no permission for operation)
-      - 500 -
+      - 500:
         - **Description** - Internal Server Error
   - **Method** - PUT
     - **Summary** - Method Not Allowed
@@ -204,7 +204,7 @@
         - **Required** - false
         - **Type** - NA
     - **HTTP Responses:**
-      - 405 -
+      - 405:
         - **Description** - Method Not Allowed
   - **Method** - DELETE
     - **Summary** - Method Not Allowed
@@ -213,7 +213,7 @@
         - **Required** - false
         - **Type** - NA
     - **HTTP Responses:**
-      - 405 -
+      - 405:
         - **Description** - Method Not Allowed
 
 - **`/users/{userId}/tasks/{taskId}`**
@@ -225,7 +225,7 @@
         - **Required** - false
         - **Type** - NA
     - **HTTP Responses:**
-      - 405 -
+      - 405:
         - **Description** - Method Not Allowed
   - **Method** - GET
     - **Summary** - Returns supplied taskId task information
@@ -238,16 +238,16 @@
         - **Required** - true
         - **Type** - int
     - **HTTP Responses:**
-      - 200 -
+      - 200:
         - **Description** - Successful operation - task retrieved
         - **Schema**
           - type - JSON
           - item - Task object
-      - 400 -
+      - 400:
         - **Description** - Bad Request - Invalid userId or taskId supplied
-      - 401 -
+      - 401:
         - **Description** - Unauthorized (user is not authenticated)
-      - 500 -
+      - 500:
         - **Description** - Internal Server Error
   - **Method** - PUT
     - **Summary** - Update task information
@@ -263,18 +263,18 @@
         - **Required** - true
         - **Type** - JSON
     - **HTTP Responses:**
-      - 200 -
+      - 200:
         - **Description** - Successful operation - task updated
         - **Schema**
           - type - JSON
           - item - Task object
-      - 400 -
+      - 400:
         - **Description** - Bad Request - Invalid userId or taskId supplied
-      - 401 -
+      - 401:
         - **Description** - Unauthorized (user is not authenticated)
-      - 403 -
+      - 403:
         - **Description** - Forbidden (user has no permission for operation)
-      - 500 -
+      - 500:
         - **Description** - Internal Server Error
   - **Method** - DELETE
     - **Summary** - Delete task
@@ -287,18 +287,18 @@
         - **Required** - true
         - **Type** - int
     - **HTTP Responses:**
-      - 200 -
+      - 200:
         - **Description** - Successful operation - task deleted
         - **Schema**
           - type - JSON
           - item - Task object deleted
-      - 400 -
+      - 400:
         - **Description** - Bad Request - Invalid userId or taskId supplied
-      - 401 -
+      - 401:
         - **Description** - Unauthorized (user is not authenticated)
-      - 403 -
+      - 403:
         - **Description** - Forbidden (user has no permission for operation)
-      - 500 -
+      - 500:
         - **Description** - Internal Server Error
 
 ## Definitions
@@ -306,12 +306,12 @@
 - **`user`** -
 
   - **Type** - object
-  - **Required Properties** -
+  - **Required Properties:**
     - userId
     - taskId
     - username
     - password
-  - **Properties** -
+  - **Properties:**
     - **userId** -
       - **Type** - integer
       - **Format** - int64
